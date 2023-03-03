@@ -1,0 +1,25 @@
+<nav>
+    <ul *ngIf="!diviceXs">
+        <a [routerLink]="['/']" class="{{urlActive === '/home'?'activo':'normal'}}"><li>Inicio</li></a>
+        <a [routerLink]="['/product', 'bebes']" class="{{urlActive === '/product/bebes'?'activo':'normal'}}"><li>Bebes</li></a>
+        <a [routerLink]="['/product', 'bebitos']" class="{{urlActive === '/product/bebitos'?'activo':'normal'}}"><li>Bebitos</li></a>
+        <a [routerLink]="['/product', 'niñas']" class="{{urlActive === '/product/ni%C3%B1as'?'activo':'normal'}}"><li>Niñas</li></a>
+        <a [routerLink]="['/product', 'niños']" class="{{urlActive === '/product/ni%C3%B1os'?'activo':'normal'}}"><li>Niños</li></a>
+        <a [routerLink]="['/product', 'dama']" class="{{urlActive === '/product/dama'?'activo':'normal'}}"><li>Dama</li></a>
+        <a [routerLink]="['/product', 'caballero']" class="{{urlActive === '/product/caballero'?'activo':'normal'}}"><li>Hombre</li></a>
+        
+        <a  target="_blank" href="https://api.whatsapp.com/send?phone=573218427953&text=¡Hola! %20Quiero%20comunicarme%20con%20un%20asesor." (click)="drawerService.toggle()"><li>Contáctenos</li></a>
+    </ul>
+
+    <ul *ngIf="diviceXs">
+        <a [routerLink]="['/']" class="{{urlActive === '/home'?'activo':'normal'}}" (click)="drawerService.toggle()"><li>Inicio</li></a>
+        <a [routerLink]="['/product', 'bebes']" class="{{urlActive === '/product/bebes'?'activo':'normal'}}" (click)="drawerService.toggle()"><li>Bebes</li></a>
+        <a [routerLink]="['/product', 'bebitos']" class="{{urlActive === '/product/bebitos'?'activo':'normal'}}" (click)="drawerService.toggle()"><li>Bebitos</li></a>
+        <a [routerLink]="['/product', 'niñas']" class="{{urlActive === '/product/ni%C3%B1as'?'activo':'normal'}}" (click)="drawerService.toggle()"><li>Niñas</li></a>
+        <a [routerLink]="['/product', 'niños']" class="{{urlActive === '/product/ni%C3%B1os'?'activo':'normal'}}" (click)="drawerService.toggle()"><li>Niños</li></a>
+        <a [routerLink]="['/product', 'dama']" class="{{urlActive === '/product/dama'?'activo':'normal'}}" (click)="drawerService.toggle()"><li>Dama</li></a>
+        <a [routerLink]="['/product', 'caballero']" class="{{urlActive === '/product/caballero'?'activo':'normal'}}" (click)="drawerService.toggle()"><li>Hombre</li></a>
+        
+        <a  target="_blank" href="https://api.whatsapp.com/send?phone=573218427953&text=¡Hola! %20Quiero%20comunicarme%20con%20un%20asesor." (click)="drawerService.toggle()"><li>Contáctenos</li></a>
+    </ul>
+</nav>

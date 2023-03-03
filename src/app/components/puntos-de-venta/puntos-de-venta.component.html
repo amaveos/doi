@@ -1,0 +1,9 @@
+<section>
+    <h1>Puntos de venta</h1>
+    <ul>
+        <li *ngFor="let punto of listadoPuntosDeVenta">
+            <strong>{{punto.nombre}}</strong>
+            <span>{{punto.direccion}}</span>
+        </li>
+    </ul>
+</section>

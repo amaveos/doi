@@ -1,0 +1,81 @@
+@import "../assets/branding";
+
+mat-toolbar {
+    background-color: $whiteColor;
+    height: 100px;
+
+    div#mat-toolbar-row {
+        margin: 10px auto;
+        height: 80px;
+        width: 100%;
+
+        a#goToHome {
+            display: block !important;
+            margin: 10px 0;
+            height: 50px;
+
+            figure#logoCompany {
+                background-image: url(../assets/imgs/logo.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                margin: 0;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+    }
+
+    div#contactInfoHeader {
+        background-color: $cobaltColor;
+        border-radius: 0 0 0 40px;
+        position: absolute;
+        right: 0;
+        padding: 0 10px 5px;
+        top: 0;
+        width: 520px;
+
+        a {
+            color: $whiteColor;
+            display: block;
+            font-family: $QuicksandFont;
+            font-weight: 400;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        p {
+            color: $whiteColor;
+            font-family: $QuicksandFont;
+            font-weight: 400;
+            margin: 0 10px;
+            text-align: center;
+
+            strong {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    app-menu {
+        position: relative;
+        top: 10px;
+        max-width: 55% !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    mat-drawer-container {
+        mat-drawer {
+            width: 70% !important;
+
+            p {
+                font-size: 1.2em;
+                line-height: 2em;
+                padding-left: 30px;
+            }
+        }
+    }
+}

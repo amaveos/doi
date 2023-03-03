@@ -1,0 +1,231 @@
+@import "../../../assets/branding";
+
+
+section.main {
+    div.banner {
+        ngu-carousel {
+            height: calc(100vh - 100px);
+
+            .bannerStyle {
+                background-size: cover !important;
+                height: calc(100vh - 80px);
+                width: 100%;
+            }
+
+            button {
+                background: transparent;
+                border: inherit;
+                position: absolute;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+                width: 50px;
+                height: 50px;
+                border-radius: 999px;
+                z-index: 1;
+            }
+
+
+            .leftRs {
+                left: 0;
+            }
+
+            .rightRs {
+                right: 0;
+            }
+
+            .myPoint {
+                list-style-type: none;
+                text-align: center;
+                padding: 3px;
+                margin: 0;
+                white-space: nowrap;
+                overflow: auto;
+                box-sizing: border-box;
+                position: relative;
+                top: -35px;
+                z-index: 99999;
+            }
+
+            .myPoint li {
+                background-color: $whiteColor;
+                border-radius: 50%;
+                // box-shadow: 0 0 6px $tertiaryColorGray;
+                display: inline-block;
+                padding: 6px;
+                margin: 0 6px;
+                transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+                transition: 0.4s;
+            }
+
+            .myPoint li.active {
+                background: $cobaltColor;
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    div.menuPijamas {
+        h2 {
+            color: $CornflowerColor;
+            font-family: $QuicksandFont;
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        div#coleccion {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: 0 auto;
+            width: 80%;
+
+            article {
+                align-items: flex-end;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                height: 219px;
+                margin: 15px 10px;
+                width: 230px;
+
+                div {
+                    margin-bottom: 20px;
+
+                    h3 {
+                        color: $whiteColor;
+                        font-family: $QuicksandFont;
+                        letter-spacing: 3px;
+                        margin: 0;
+                        text-align: center;
+                    }
+
+                    h4 {
+                        color: $whiteColor;
+                        font-family: $QuicksandFont;
+                        font-size: 1.5em;
+                        margin: 0;
+                        text-align: center;
+                    }
+
+                    a {
+                        cursor: pointer;
+                        text-decoration: none;
+
+                        div {
+                            background-color: $BroomColor;
+                            border-radius: 8px;
+                            color: $cobaltColor;
+                            font-family: $QuicksandFont;
+                            font-weight: 700;
+                            font-size: 1.23em;
+                            margin-left: auto;
+                            margin-right: auto;
+                            margin-top: 5px;
+                            padding-top: 5px;
+                            padding-bottom: 7px;
+                            text-align: center;
+                            width: 200px;
+                        }
+                    }
+                }
+
+            }
+
+            article.mna {
+                background-image: url(../../../assets/imgs/pijamas-bebes-ninas.jpg);
+            }
+
+            article.pno {
+                background-image: url(../../../assets/imgs/pijamas-ninos.jpg);
+            }
+
+            article.pna {
+                background-image: url(../../../assets/imgs/pijamas-ninas.jpg);
+            }
+
+            article.dma {
+                background-image: url(../../../assets/imgs/imgDama.jpg);
+            }
+
+            article.hom {
+                background-image: url(../../../assets/imgs/imgCaballero.jpg);
+            }
+
+            article.bebitos {
+                background-image: url(../../../assets/imgs/mameluco-nino.jpg);
+            }
+        }
+    }
+
+    div.generalInfo {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 30px auto;
+        width: 80%;
+
+        a{
+            text-decoration: none;
+            display: block;
+            width: 47%;
+
+            div.sec2 {
+                background-color: $CornflowerColor;
+                border-radius: 5px;
+                margin: 10px 20px;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                padding: 15px 10px;
+
+                span.material-icons {
+                    color: $CornflowerOscuroColor;
+                    font-size: 3em;
+                }
+    
+                div {
+                    width: 60%;
+    
+                    h2 {
+                        color: $CornflowerOscuroColor;
+                        margin: 0;
+                        font-family: $QuicksandFont;
+                    }
+    
+                    p {
+                        color: $CornflowerOscuroColor;
+                        margin: 0;
+                        font-family: $QuicksandFont;
+                    }
+                }
+            }
+        }
+
+        
+    }
+}
+
+@media screen and (max-width: 600px) {
+    div.menuPijamas {
+        div#coleccion {
+            width: 80% !important;
+        }
+
+    }
+
+    div.generalInfo {
+        margin: 30px auto !important;
+        flex-wrap: wrap;
+        width: 95% !important;
+
+        div.sec2 {
+            margin: 10px auto;
+            width: 90% !important;
+        }
+    }
+}

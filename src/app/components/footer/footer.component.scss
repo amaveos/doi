@@ -1,0 +1,174 @@
+@import "../../../assets/branding";
+
+section.footer {
+    background-color: $MineShaftColor;
+    padding: 30px 0;
+
+    div.contentFooter {
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+
+        div#contenido-izquierdo {
+            border-radius: 8px;
+            width: 55%;
+            max-width: 40%;
+
+            a {
+                text-decoration: none;
+                text-align: center;
+                display: block;
+                margin: 0 auto;
+
+                article {
+                    background-color: $BlackColor;
+                    border-radius: 8px;
+                    color: $SilverColor;
+                    font-family: $QuicksandFont;
+                    text-align: center;
+                    padding: 15px 0;
+                    margin: 0 auto;
+                    width: 90%;
+                }
+            }
+
+            article#apoyamos {
+                margin: 20px auto 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                figure {
+                    background-image: url(../../../assets/imgs/ic-bandera.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    display: inline-table;
+                    height: 59px;
+                    margin-right: 15px;
+                    margin-left: 0;
+                    vertical-align: middle;
+                    width: 90px;
+                }
+
+                p{
+                    color: $SilverColor;
+                    font-family: $QuicksandFont;
+                    margin: 0;
+                }
+            }
+        }
+
+        div#contenido-derecha {
+            max-width: 40%;
+            div{
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                margin: 10px 0;
+
+                span.material-icons{
+                    color: $CornflowerColor;
+                    margin-right: 10px;
+                }
+
+                p{
+                    color: $SilverColor;
+                    font-family: $QuicksandFont;
+                    margin: 0;
+                }
+            }
+        }
+
+        div#redes-sociales{
+            h3{
+                color: $BroomColor;
+                font-family: $QuicksandFont;
+            }
+
+            a{
+                align-items: center;
+                color: $CornflowerColor;
+                text-decoration: none;
+                display: flex;
+                justify-content: flex-start;
+
+                figure#facebook{
+                    background-image: url(../../../assets/imgs/ic-facebook.svg);
+                    height: 50px;
+                    margin: 0 10px 0 0;
+                    width: 50px;
+                }
+
+                figure#instagram{
+                    background-image: url(../../../assets/imgs/ic-instagram.svg);
+                    height: 50px;
+                    margin: 0 10px 0 0;
+                    width: 50px;
+                }
+
+                span{
+                    color:$SilverColor;
+                    font-family: $QuicksandFont;
+                }
+            }
+        }
+    }
+
+    div#copyright{
+        margin-top: 20px;
+
+        p{
+            color: $SilverColor;
+            font-family: $QuicksandFont;
+            font-size: .9em;
+            margin: 0;
+            text-align: center;
+
+            a{
+                color: #fff;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    div.contentFooter {
+        flex-wrap: wrap;
+
+        div#contenido-izquierdo {
+            margin: 0 auto;
+            width: 95% !important;
+            max-width: 95% !important;
+
+            article#apoyamos {                
+                width: 75%;   
+            }
+        }
+
+        div#contenido-derecha {
+            max-width: 75% !important;
+            width: 75% !important;
+
+            div{
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+
+        div#redes-sociales{
+            margin: 20px auto;
+            width: 95%;
+
+            h3{
+                text-align: center;
+            }
+
+            a{
+                align-items: center !important;
+                justify-content: center !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,136 @@
+<section class="main">
+    <div class="banner">
+        <ngu-carousel #myCarousel [inputs]="carouselConfig" [dataSource]="[first, second, third, fourth]">
+
+            <ngu-item *nguCarouselDef="let item;" class="item">
+
+                <ng-container *ngTemplateOutlet="item"></ng-container>
+
+            </ngu-item>
+
+            <ng-template #first>
+                <div class="bannerStyle" *ngIf="!diviceXs" [style.background]="landscapeImg[0]"></div>
+                <div class="bannerStyle" *ngIf="diviceXs" [style.background]="landscapeImgXs[0]"></div>
+            </ng-template>
+
+            <ng-template #second>
+                <div class="bannerStyle" *ngIf="!diviceXs" [style.background]="landscapeImg[1]"></div>
+                <div class="bannerStyle" *ngIf="diviceXs" [style.background]="landscapeImgXs[1]"></div>
+            </ng-template>
+
+            <ng-template #third>
+                <div class="bannerStyle" *ngIf="!diviceXs" [style.background]="landscapeImg[2]"></div>
+                <div class="bannerStyle" *ngIf="diviceXs" [style.background]="landscapeImgXs[2]"></div>
+            </ng-template>
+
+            <ng-template #fourth>
+                <div class="bannerStyle" *ngIf="!diviceXs" [style.background]="landscapeImg[3]"></div>
+                <div class="bannerStyle" *ngIf="diviceXs" [style.background]="landscapeImgXs[3]"></div>
+            </ng-template>
+
+
+            <button NguCarouselNext class="rightRs">
+                <span class="material-icons">navigate_next</span>
+            </button>
+            <button NguCarouselPrev class="leftRs">
+                <span class="material-icons">navigate_before</span>
+            </button>
+
+            <ul class="myPoint" NguCarouselPoint>
+                <li *ngFor="let item of myCarousel.pointNumbers; let j = index"
+                    [class.active]="item==myCarousel.activePoint" (click)="myCarousel.moveTo(item)"></li>
+            </ul>
+        </ngu-carousel>
+    </div>
+
+    <div class="menuPijamas">
+        <h2>Conoce Nuestra Colección de Pijamas</h2>
+        <div id="coleccion">
+            <article class="mna">
+                <div>
+                    <h4>Bebes</h4>
+                    <a [routerLink]="['/product', 'bebes']">
+                        <div>Ver Productos</div>
+                    </a>
+                </div>
+            </article>
+
+            <article class="bebitos">
+                <div>
+                    <h4>Bebitos</h4>
+                    <a [routerLink]="['/product', 'bebitos']">
+                        <div>Ver Productos</div>
+                    </a>
+                </div>
+            </article>
+
+            <article class="pna">
+                <div>
+                    <h4>Niñas</h4>
+                    <a [routerLink]="['/product', 'niñas']">
+                        <div>Ver Productos</div>
+                    </a>
+                </div>
+            </article>
+
+            <article class="pno">
+                <div>
+                    <h4>Niños</h4>
+                    <a [routerLink]="['/product', 'niños']">
+                        <div>Ver Productos</div>
+                    </a>
+                </div>
+            </article>
+
+            <article class="dma">
+                <div>
+                    <h4>Dama</h4>
+                    <a [routerLink]="['/product', 'dama']">
+                        <div>Ver Productos</div>
+                    </a>
+                </div>
+            </article>
+
+            <article class="hom">
+                <div>
+                    <h4>Hombre</h4>
+                    <a [routerLink]="['/product', 'caballero']">
+                        <div>Ver Productos</div>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div class="generalInfo">
+        <a href="https://api.whatsapp.com/send?phone=573218427953&text=¡Hola! %20Quiero%20comunicarme%20con%20un%20asesor."
+        target="_blank">
+            <div id="necesita-ayuda" class="sec2">
+                <span class="material-icons">info</span>
+                <div>
+                    <h2>¿Necesitas Ayuda?</h2>
+                    <p>Estamos aquí para lo que necesites. <br />
+                        Soluciona tus dudas.<br />
+                        <strong>Comunícate con nosotros</strong>
+                    </p>
+                    <!-- <a href="">Haz clic aquí</a> -->
+                </div>
+            </div>
+        </a>
+        
+        <a [routerLink]="['/puntosDeVenta']">
+            <div id="necesita-ayuda" class="sec2">
+                <span class="material-icons">store</span>
+                <div>
+                    <h2>Puntos de Venta.</h2>
+                    <p>Conoce los puntos de venta propios en Medellín / Colombia.<br />
+                        <strong>Comunícate con nosotros</strong>
+                    </p>
+    
+                    <!-- <a href="">Haz clic aquí</a> -->
+                </div>
+            </div>
+        </a>
+        
+    </div>
+</section>

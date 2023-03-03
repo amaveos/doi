@@ -1,0 +1,51 @@
+@import "../../../assets/branding";
+
+section {
+    overflow: hidden;
+
+    h1{
+        color: $CornflowerOscuroColor;
+        font-family: $QuicksandFont;
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 20px auto;
+        padding: 0 !important;
+        width: 80%;
+
+        li {
+            border: 1px solid $SilverColor;
+            box-sizing: border-box;
+            border-radius: 5px;
+            font-family: $QuicksandFont;
+            margin: 20px auto;
+            padding: 20px;
+            list-style: none;
+            width: 30%;
+
+            strong {
+                color: $cobaltColor;
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            span{
+                display: block;
+                font-size: .9em;
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    ul {
+        width: 90% !important;
+
+        li {
+            width: 100% !important;
+        }
+    }
+}

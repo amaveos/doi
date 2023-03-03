@@ -1,0 +1,72 @@
+@import "../../../assets/branding";
+
+section.listadoProductos {
+    overflow: hidden;
+
+    mat-form-field {
+        display: block;
+        margin: 20px auto 0;
+        width: 300px;
+    }
+
+    div.productos {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        width: 100%;
+
+        div.pijama {
+            box-sizing: border-box;
+            height: 66vh;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 10px auto;
+            width: 20vw;
+
+            figure {
+                background-position: center;
+                background-size: cover;
+                height: 77%;
+                margin: 0;
+                width: 100%;
+            }
+
+            figcaption {
+                h4 {
+                    color: $cobaltColor;
+                    font-family: $QuicksandFont;
+                    margin-bottom: 0;
+                }
+
+                div {
+                    align-items: center;
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    p {
+                        border:1px solid $DoveGrayColor;
+                        box-sizing: border-box;
+                        border-radius: 5px;
+                        color: $DoveGrayColor;
+                        padding: 2px 4px;
+                        font-family: $QuicksandFont;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section.listadoProductos div.productos {
+
+        div.pijama{
+            margin: 10px auto !important;
+            height: 66vh !important;
+            width: 90%;
+        }
+    }
+}

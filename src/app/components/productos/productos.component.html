@@ -1,0 +1,42 @@
+<section class="listadoProductos">
+    <mat-form-field appearance="fill" *ngIf="url === 'bebes' || url === 'bebitos'">
+        <mat-label>Filtrar Por</mat-label>
+        <mat-select [(value)]="selected" (selectionChange)="mostrarItems($event)">
+            <mat-option value="todo">Mostrar Todo</mat-option>
+            <mat-option value="girl">Niñas</mat-option>
+            <mat-option value="boy">Niños</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div class="productos">
+        <ng-container *ngFor="let pro of listaProductosMostrar.productos">
+            <ng-container *ngIf="pro.genero ==='boy'">
+                <div *ngIf="boy" class="pijama">
+                    <figure style="background-image: url({{pro.urlImg}});"></figure>
+                    <figcaption>
+                        <h4>{{pro.title}}</h4>
+                        <div class="tallas">
+                            <p *ngFor="let talla of pro.tallas">
+                                {{talla}}
+                            </p>
+                        </div>
+                    </figcaption>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="pro.genero ==='girl'">
+                <div *ngIf="girl" class="pijama">
+                    <figure style="background-image: url({{pro.urlImg}});"></figure>
+                    <figcaption>
+                        <h4>{{pro.title}}</h4>
+                        <div class="tallas">
+                            <p *ngFor="let talla of pro.tallas">
+                                {{talla}}
+                            </p>
+                        </div>
+                    </figcaption>
+                </div>
+            </ng-container>
+        </ng-container>
+        
+    </div>
+</section>
