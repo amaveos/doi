@@ -1,0 +1,26 @@
+version: '3'
+services:
+  angular:
+    image: doi
+    restart: always
+    ports:
+      - "4700:4700"
+    environment:
+      - PORT=4700
+    networks:
+      - backend
+  nginx:
+    image: nginximage
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - /home/ubuntu/certs/doi.com.co.pem:/etc/ssl/certs/doi.com.co.pem
+      - /home/ubuntu/certs/doi.com.co.key:/etc/ssl/certs/doi.com.co.key
+    networks:
+      - backend
+    depends_on:
+      - angular
+networks:
+  backend:
+    driver: bridge
