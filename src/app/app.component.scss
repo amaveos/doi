@@ -52,26 +52,51 @@ mat-toolbar {
             margin: 0 10px;
             text-align: center;
 
-            strong {
+            strong{
                 margin-right: 10px;
             }
         }
     }
 
-    app-menu {
+    app-menu{
         position: relative;
         top: 10px;
         max-width: 55% !important;
     }
 }
 
-@media screen and (max-width: 600px) {
+a#floatWhatsapp{
+    height: 70px;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    z-index: 9999;
+    width: 70px;
 
-    mat-drawer-container {
-        mat-drawer {
+    figure{
+        background-image: url(../assets/imgs/ic-floatBtnWhatsapp.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    mat-drawer-container{
+        mat-drawer{
             width: 70% !important;
 
-            p {
+            p{
+                margin: 0 auto;
+                line-height: normal;
+                font-size: .9em !important;
+            }
+
+            p{
                 font-size: 1.2em;
                 line-height: 2em;
                 padding-left: 30px;
