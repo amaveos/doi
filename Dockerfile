@@ -29,8 +29,8 @@ COPY --from=builder /app/dist ./dist
 
 USER root
 
-RUN mv /app/dist/theflexshool/server/main* /app/dist/theflexshool/server/main.js
+RUN mv /app/dist/doi/server/main* /app/dist/doi/server/main.js
 
 EXPOSE 4700
 
-CMD ["node", "./dist/theflexshool/server/main.js"]
+CMD ["node", "./dist/doi/server/main.js"]

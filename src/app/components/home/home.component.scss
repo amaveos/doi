@@ -223,8 +223,9 @@ section.main {
         flex-wrap: wrap;
         width: 95% !important;
 
-        div.sec2 {
-            margin: 10px auto;
+        a{
+            text-decoration: none;
+            display: block;
             width: 90% !important;
         }
     }
