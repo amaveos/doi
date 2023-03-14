@@ -221,6 +221,24 @@ export class ProductosComponent {
           tallas: ["4", "6", "8", "10", "12", "14", "16"],
           genero: "girl"
         },
+        {
+          urlImg: "../../../assets/imgs/ninas/_VMV5043.jpg",
+          title: "PIJAMA NIÑA MANGA LARGA BOLERO PANTALÓN",
+          tallas: ["4", "6", "8", "10", "12", "14", "16"],
+          genero: "girl"
+        },
+        {
+          urlImg: "../../../assets/imgs/ninas/_VMV5044.jpg",
+          title: "PIJAMA NIÑA MANGA CORTA SHORT",
+          tallas: ["4", "6", "8", "10", "12", "14", "16"],
+          genero: "girl"
+        },
+        {
+          urlImg: "../../../assets/imgs/ninas/_VMV5045.jpg",
+          title: "PIJAMA NIÑA MANGA CORTA SHORT",
+          tallas: ["4", "6", "8", "10", "12", "14", "16"],
+          genero: "girl"
+        }
       ]
     },
     {
@@ -240,7 +258,7 @@ export class ProductosComponent {
         },
         {
           urlImg: "../../../assets/imgs/dama/_VMV5733.jpg",
-          title: "PIJAMA DAMA SISA CORTO",
+          title: "PIJAMA DAMA SISA SHORT",
           tallas: ["S", "M", "L", "XL"],
           genero: "girl"
         },

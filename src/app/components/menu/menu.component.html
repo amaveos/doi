@@ -8,7 +8,7 @@
         <a [routerLink]="['/product', 'dama']" class="{{urlActive === '/product/dama'?'activo':'normal'}}"><li>Dama</li></a>
         <a [routerLink]="['/product', 'caballero']" class="{{urlActive === '/product/caballero'?'activo':'normal'}}"><li>Hombre</li></a>
         
-        <a  target="_blank" href="https://api.whatsapp.com/send?phone=573218427953&text=¡Hola! %20Quiero%20comunicarme%20con%20un%20asesor." (click)="drawerService.toggle()"><li>Contáctenos</li></a>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=573218427953&text=¡Hola! %20Quiero%20comunicarme%20con%20un%20asesor."><li>Contáctenos</li></a>
     </ul>
 
     <ul *ngIf="diviceXs">
