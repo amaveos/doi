@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { MediaObserver } from '@angular/flex-layout';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
-import { Subject, takeUntil } from 'rxjs';
+import { Subject, Subscription, takeUntil } from 'rxjs';
+import { DetalleDelProductoComponent } from '../detalle-del-producto/detalle-del-producto.component';
 
 @Component({
   selector: 'app-productos',
@@ -234,8 +236,8 @@ export class ProductosComponent {
           genero: "girl"
         },
         {
-          urlImg: "../../../assets/imgs/ninas/_VMV5045.jpg",
-          title: "PIJAMA NIÑA MANGA CORTA SHORT",
+          urlImg: "../../../assets/imgs/ninas/_VMV5042.jpg",
+          title: "MANGA CORTA SHORT BOLERO",
           tallas: ["4", "6", "8", "10", "12", "14", "16"],
           genero: "girl"
         }
@@ -317,9 +319,14 @@ export class ProductosComponent {
   girl: boolean = true;
   url!: string;
 
+  private mediaSubscription!: Subscription;
+  private activeMediaQuery = '';
+  diviceXs!: boolean;
+
   constructor(
     private route: ActivatedRoute,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public mediaObserver: MediaObserver,
   ) { }
 
 
@@ -334,6 +341,20 @@ export class ProductosComponent {
         this.girl = true;
         this.boy = true;
       });
+
+    this.mediaSubscription = this.mediaObserver
+      .asObservable()
+      .subscribe((change) => {
+        // console.log('change', change[0].mqAlias);
+        if (change[0].mqAlias === 'xs') {
+          this.diviceXs = true;
+        }
+        else {
+          // console.log("hola")
+          this.diviceXs = false;
+        }
+      });
+
   }
 
   mostrarItems(event: any) {
@@ -355,4 +376,27 @@ export class ProductosComponent {
     this.destroyed$.next(true);
   }
 
+  openDialog(producto: any): void {
+
+    let relativeWidth = "35vw";
+    let relativeHeight = "95vh";
+
+    if(this.diviceXs){
+      relativeWidth = "95vw";
+      relativeHeight = "88vh"
+    }
+    else{
+      relativeWidth = "35vw";
+      relativeHeight = "95vh";
+    }
+
+    const dialogRef = this.dialog.open(DetalleDelProductoComponent, {
+      data: producto,
+      height: relativeHeight,
+      width: relativeWidth,
+      maxWidth:relativeWidth
+    });
+  }
 }
+
+

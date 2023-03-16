@@ -11,7 +11,7 @@
     <div class="productos">
         <ng-container *ngFor="let pro of listaProductosMostrar.productos">
             <ng-container *ngIf="pro.genero ==='boy'">
-                <div *ngIf="boy" class="pijama">
+                <div *ngIf="boy" class="pijama" (click)="openDialog(pro)">
                     <figure style="background-image: url({{pro.urlImg}});"></figure>
                     <figcaption>
                         <h4>{{pro.title}}</h4>
@@ -24,7 +24,7 @@
                 </div>
             </ng-container>
             <ng-container *ngIf="pro.genero ==='girl'">
-                <div *ngIf="girl" class="pijama">
+                <div *ngIf="girl" class="pijama" (click)="openDialog(pro)">
                     <figure style="background-image: url({{pro.urlImg}});"></figure>
                     <figcaption>
                         <h4>{{pro.title}}</h4>

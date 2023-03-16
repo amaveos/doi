@@ -1,0 +1,113 @@
+@import "../../../assets/branding";
+
+section{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+
+    div.maps{
+        height: 50vh;
+        margin: 20px ;
+        width: 50%;
+
+        iframe{
+            border-radius: 10px;
+            height: 100%;
+            width: 100%;
+        }
+
+    }
+
+    div.info{
+        margin: 20px;
+        width: 45%;
+
+        h1{
+            color: $cobaltColor;
+            font-family: $QuicksandFont;
+            margin-bottom: 5px;
+        }
+
+        h3{
+            color: $CornflowerOscuroColor;
+            font-family: $QuicksandFont;
+            margin-top: 0px;
+        }
+
+        p{
+            font-family: $QuicksandFont;
+            line-height: 1.4em;
+            text-align: justify;
+        }
+
+        h2{
+            color:$MineShaftColor;
+            font-family: $QuicksandFont;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        div.contactInfo{
+            display: flex;
+            justify-content: flex-start;
+
+            div{
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                margin-right: 15px;
+
+                figure{
+                    background-position: center;
+                    background-size: contain;
+                    height: 50px;
+                    margin: 0 10px 0 0;
+                    width: 50px;
+                }
+
+                figure.email{
+                    background-image: url(../../../assets/imgs/contactEmail.png);
+                }
+
+                figure.whatsapp{
+                    background-image: url(../../../assets/imgs/contactWhatsapp.png);
+                }
+
+                a{
+                    color: $CornflowerOscuroColor;
+                    font-family: $QuicksandFont;
+                    font-weight: 600;
+                    text-decoration: none;
+                }
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    div.maps{
+        margin: 20px auto !important;
+        width: 95% !important;
+    }
+
+    div.info{
+        margin: 10px auto !important;
+        width: 90% !important;
+
+        div{
+            align-items: center;
+            display: flex;
+            justify-content: flex-start !important;
+            flex-wrap: wrap;
+            margin: 10px auto !important;
+            width: 100%;
+        }
+    }
+}

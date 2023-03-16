@@ -76,6 +76,11 @@ section.footer {
                     color: $SilverColor;
                     font-family: $QuicksandFont;
                     margin: 0;
+
+                    a{
+                        color: $SilverColor;
+                        text-decoration: none;
+                    }
                 }
             }
         }

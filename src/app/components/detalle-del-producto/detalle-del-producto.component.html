@@ -1,0 +1,11 @@
+<section>
+    <a (click)="close()">Cerrar</a>
+    <h1>{{data.title}}</h1>
+    <div class="tallas">
+        <p *ngFor="let talla of data.tallas">
+            {{talla}}
+        </p>
+    </div>
+
+    <figure style="background-image: url({{data.urlImg}});"></figure>
+</section>

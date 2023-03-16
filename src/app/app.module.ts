@@ -15,6 +15,7 @@ import { ContactenosComponent } from './components/contactenos/contactenos.compo
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PuntosDeVentaComponent } from './components/puntos-de-venta/puntos-de-venta.component';
+import { DetalleDelProductoComponent } from './components/detalle-del-producto/detalle-del-producto.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PuntosDeVentaComponent } from './components/puntos-de-venta/puntos-de-v
     MenuComponent,
     ProductosComponent,
     ContactenosComponent,
-    PuntosDeVentaComponent
+    PuntosDeVentaComponent,
+    DetalleDelProductoComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

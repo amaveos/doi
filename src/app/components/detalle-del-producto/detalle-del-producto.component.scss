@@ -1,0 +1,57 @@
+@import "../../../assets/branding";
+
+section {
+    a{
+        border-bottom: 1px solid $DoveGrayColor;
+        color: $DoveGrayColor;
+        cursor: pointer;
+        display: block;
+        font-family: $QuicksandFont;
+        font-weight: 600;
+        margin: 10px auto;
+        text-align: center;
+        padding-bottom: 5px;
+        width: 90px;
+    }
+
+    h1 {
+        color: $cobaltColor;
+        font-family: $QuicksandFont;
+        margin: 15px 20px;
+        text-align: center
+    }
+
+    div.tallas{
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        width: 300px;
+
+        p {
+            border:1px solid $DoveGrayColor;
+            box-sizing: border-box;
+            border-radius: 5px;
+            color: $DoveGrayColor;
+            padding: 2px 4px;
+            font-family: $QuicksandFont;
+        }
+    }
+
+    figure{
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: calc(90vh - 125px);
+        margin: 0 auto;
+        width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+    figure{
+        height: calc(90vh - 225px) !important;
+    }
+}
